@@ -8,6 +8,13 @@ export default function RandomColor(){
     const [color, setColor] = useState('#000000')
 
 
+        function handleCreateRandomHexColor(){
+
+        }
+
+        function handleCreateRandomRgbColor(){
+
+        }
 
     return(
         <div style= {{
@@ -19,9 +26,9 @@ export default function RandomColor(){
 
 
      <div className="container">
-        <button> Create HEX Color</button>
-        <button>Create RGB Color</button> 
-        <button>Generate Random Color</button>
+        <button onClick={() => setTypeOfColor('hex')}> Create HEX Color</button>
+        <button onClick={() => setTypeOfColor('rgb')}>Create RGB Color</button> 
+        <button onClick={() => {typeOfColor ==='hex'? handleCreateRandomHexColor: handleCreateRandomRgbColor }}>Generate Random Color</button>
     
         </div>
     </div>
