@@ -10,6 +10,9 @@ function App() {
      <Accordion/> 
      <RandomColor/>
      <StarRating noOfStars={10}/>
+    <ImageSlider url={'https://picsum.photos/v2/list'} p
+    age= {"1"} 
+    limit={"10"}/>
     </div>
   );
 }

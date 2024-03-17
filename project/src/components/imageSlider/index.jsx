@@ -2,7 +2,7 @@
 
 
 
-export default function ImageSlider({url, limit}){
+export default function ImageSlider({url, limit = 5 , page =1 }){
 
     const [images, setImages ] = useState([]);
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -14,7 +14,7 @@ export default function ImageSlider({url, limit}){
 
         try{
             setLoading(true)
-            const response = await fetch(getUrl);
+            const response = await fetch(`${getUrl}?page=${page}&limit=${limit}`);
             const data = await response.json();
 
             if(data){
@@ -32,6 +32,7 @@ export default function ImageSlider({url, limit}){
         if(url !== '') fetchImages()
 
     },[url])
+    console.log(images)
 
     if(loading){
         return<div> Loading Data ! Please wait</div>
