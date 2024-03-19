@@ -39,11 +39,24 @@ export default function LoadMoreData(){
         return<div> Loading Data! Please wait.</div>
     }
 
-    return <div className="container">
+    return( <div className="container">
         <div>
+            {
+                products && products.length ?
+                products.map((item)=> (
+                <div
+                    key={
+                        item.id
+                    }>
+                        <img src= { item.thumbnail} />
+                </div>)
+                )
+                :null}
+            
 
 
 
     </div>
     </div>
+    )
 }
