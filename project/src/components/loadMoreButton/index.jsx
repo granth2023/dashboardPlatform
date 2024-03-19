@@ -6,7 +6,7 @@ export default function LoadMoreData(){
     const [loading, setLoading] = useState(false);
 
     const[products, setProducts] = useState([]);
-    const [ ount, setCount] = useState(0);
+    const [ count, setCount] = useState(0);
 
     async function fetchProducts(){
         try{
@@ -35,5 +35,15 @@ export default function LoadMoreData(){
 
     },[])
 
-    return <div className="container"></div>
+    if(loading){
+        return<div> Loading Data! Please wait.</div>
+    }
+
+    return <div className="container">
+        <div>
+
+
+
+    </div>
+    </div>
 }
