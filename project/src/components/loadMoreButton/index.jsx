@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import 'styles.css'
+import './styles.css';
 export default function LoadMoreData(){
 
     const [loading, setLoading] = useState(false);
@@ -75,4 +75,4 @@ export default function LoadMoreData(){
     </div>
     </div>
     )
-}
+} 
