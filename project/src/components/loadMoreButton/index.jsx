@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-
+import 'styles.css'
 export default function LoadMoreData(){
 
     const [loading, setLoading] = useState(false);
@@ -19,7 +19,7 @@ export default function LoadMoreData(){
             const result = await response.json()
 
             if(result && result.products && result.products.length){
-                setProducts(result.products)
+                setProducts((prevData) => [...prevData, ...result.products])
                 setLoading(false)
             }
             console.log(result)
@@ -39,7 +39,7 @@ export default function LoadMoreData(){
         return<div> Loading Data! Please wait.</div>
     }
 
-    return( <div className="container">
+    return( <div className="load-more-container">
         <div className='product-container'>
         <div>
             {
@@ -55,7 +55,10 @@ export default function LoadMoreData(){
                 )
                 :null}
             </div>
-
+            <div className='button-container'>
+                    <button oncClick={()=> setCount(count +1)
+                     }> Load More Products</button>
+                    </div>
 
 
     </div>
