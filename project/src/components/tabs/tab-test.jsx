@@ -1,5 +1,7 @@
 import Tabs from './tabs';
 
+import './tabs.css';
+
 function RandomCompoennt(){
     return<h1>Random Compoennt</h1>
 }
@@ -22,7 +24,10 @@ export default function TabTest(){
         }
     ]
 
-    
+    function handleChange(currentTabIndex){
+        console.log(currentTabIndex);
 
-    return <Tabs tabsContent={tabs}/>
+    }
+
+    return <Tabs tabsContent={tabs} onChange={handleChange}/>
 }

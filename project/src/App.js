@@ -8,6 +8,7 @@ import LoadMoreData from './components/loadMoreButton';
 import TreeView from './components/tree-view';
 import menus from '../src/components/tree-view/data.js';
 import ScrollIndicator from './components/scroll-indicator';
+import TabTest from './components/tabs/tab-test';
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
 {/* 
     <TreeView menus={menus}/> */}
     {/* <ScrollIndicator  url = {'https://dummyjson.com/products?limit=100'}/> */}
-    <Tab/>
+    <TabTest/>
     </div>
   );
 }
