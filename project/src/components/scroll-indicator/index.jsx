@@ -69,7 +69,7 @@ export default function ScrollIndicator({url}){
             <div className="top-container">
             <h1> Custom Scroll Indicator</h1>
             <div className="scroll-progress-tracking-container">
-                <div className="current-progress bar" style={{width: `${scrollPercentage}%`}}>
+                <div className="current-progress-bar" style={{width: `${scrollPercentage}%`}}>
                     
                     </div> 
             </div>
