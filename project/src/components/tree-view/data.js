@@ -36,6 +36,12 @@ export const menus = [
             {
                 label: "Register",
                 to: "register",
+                children: [
+                    { 
+                        label: 'Random data',
+                        to: '',
+                    },
+                ]
             }
         ]
 
