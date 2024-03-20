@@ -24,7 +24,7 @@ console.log(displayCurrentChildren)
 
             {
 
-                item && item.children && item.children.length > 0 ? 
+                item && item.children && item.children.length > 0 && displayCurrentChildren[item.label]? 
                 <MenuList list={item.children}/>
                 : null 
             }
