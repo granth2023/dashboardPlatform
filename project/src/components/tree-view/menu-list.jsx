@@ -1,13 +1,16 @@
+import React from 'react';
 import MenuItem from "./menu-item";
-import './styles.css';
+import './styles.css'
 
-export default function MenuList({ list = []}){
+
+
+export default function MenuList({ list = [] }){
 
     return (
         <ul className="menu-list-container">
             {
-                list && list.length 
-               ?  list.map((listItem) => <MenuItem item={listItem}/>)
+                list && list.length  > 0 
+               ?  list.map((listItem, index ) => <MenuItem key={index} item={listItem}/>)
                 
                 : null}
 

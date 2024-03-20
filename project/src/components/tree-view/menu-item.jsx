@@ -1,16 +1,17 @@
 import { useState } from "react";
-import MenuList from ",./MenuList";
- import {FaMinus, FaPlus}  from 'react-icons'
+import MenuList from "./menu-list";
+ import { FaMinus, FaPlus }  from 'react-icons/fa'
+import './styles.css';
 
 
 export default function MenuItem({item}){
 
     const [ displayCurrentChildren, setDisplayCurrentChildren] = useState({});
 
-    function handleToggleChildren(getCurrentlabel){
+    function handleToggleChildren(getCurrentlabel) {
         setDisplayCurrentChildren({
         ...displayCurrentChildren,
-        [getCurrentlabel] : !displayCurerntChildren[getCurrentlabel],
+        [getCurrentlabel] : !displayCurrentChildren[getCurrentlabel],
     })
 }
 console.log(displayCurrentChildren)
@@ -20,14 +21,14 @@ console.log(displayCurrentChildren)
             <div className="menu-item">
             <p>{item.label}</p>
             {
-                item && item.childnre && item.childnre.length ? <span oncClick={()=>{handleToggleChildren(item.label)}}>
+                item && item.childnren && item.childnren.length ? <span oncClick={()=>{handleToggleChildren(item.label)}}>
                     {
                         displayCurrentChildren[item.label] ? <FaMinus color="#fff" size={25}/> : <FaPlus color="#fff" size={25}/>
                     }
 
                 </span> : null}
+                </div>
 
-            </div>
 
             {
 
@@ -35,8 +36,9 @@ console.log(displayCurrentChildren)
                 <MenuList list={item.children}/>
                 : null 
             }
-            
+
 
         </li>
+      
     )
 }

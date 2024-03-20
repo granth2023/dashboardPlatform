@@ -6,20 +6,23 @@ import StarRating from './components/star-rating';
 import ImageSlider from './components/imageSlider';
 import LoadMoreData from './components/loadMoreButton';
 import TreeView from './components/tree-view';
+import menus from '../src/components/tree-view/data.js';
+import ScrollIndicator from './components/scroll-indicator';
 
 function App() {
   return (
     <div className="App">
-     <Accordion/> 
+     {/* <Accordion/> 
      <RandomColor/>
      <StarRating noOfStars={10}/>
     <ImageSlider url={'https://picsum.photos/v2/list'} p
     age= {"1"} 
     limit={"10"}/>
  
-    <LoadMoreData/>
-
-    <TreeView menus={menus}/>
+    <LoadMoreData/> */}
+{/* 
+    <TreeView menus={menus}/> */}
+    <ScrollIndicator  url = {'https://dummyjson.com/products?limit=100'}/>
     </div>
   );
 }
