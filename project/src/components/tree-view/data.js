@@ -12,8 +12,14 @@ export const menus = [
             to: "details",
             children: [
                 {
-                    lbale: "location",
+                    label: "location",
                     to: "location",
+                    children: [
+                        {
+                            label: 'City',
+                            to: 'city',
+                        },
+                    ]
                 }
             ]
         }
