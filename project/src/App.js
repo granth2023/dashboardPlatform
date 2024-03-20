@@ -22,7 +22,8 @@ function App() {
     <LoadMoreData/> */}
 {/* 
     <TreeView menus={menus}/> */}
-    <ScrollIndicator  url = {'https://dummyjson.com/products?limit=100'}/>
+    {/* <ScrollIndicator  url = {'https://dummyjson.com/products?limit=100'}/> */}
+    <Tab/>
     </div>
   );
 }
