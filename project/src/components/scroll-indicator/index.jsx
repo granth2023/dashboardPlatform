@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import './scroll.css'
 
 
 export default function ScrollIndicator({url}){
@@ -55,6 +56,14 @@ export default function ScrollIndicator({url}){
 
     console.log(data, loading)
     console.log(scrollPercentage)
+
+    if(errorMessage){
+        return <div> Errro! {errorMessage}</div>
+    }
+
+    if(loading){
+        return <div> Loading data 1 Please wait</div>
+    }
     return( 
         <div>
             <div className="top-container">
