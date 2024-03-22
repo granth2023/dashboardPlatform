@@ -14,7 +14,7 @@ export default function User({user}){
                 <p> User joined on {`${createdDate.getDate()} ${createdDate.toLocaleDateString('en-us', { motnh: 'short',
             })}} ${createdDate.getFullYear()}`}</p>
                 </div>
-                <div> 
+                <div className="profile-info"> 
                     <div>
                         <p> Public Repos</p>
                         <p>{public_repos}</p>
