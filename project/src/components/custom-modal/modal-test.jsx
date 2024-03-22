@@ -1,5 +1,7 @@
 
-
+import { useState }from 'react'
+import Modal from './modal';
+import './modal.css'
 
 
 export default function ModalTest(){
@@ -10,11 +12,20 @@ export default function ModalTest(){
             setShowModalPopup(!showModalPopup);
         }
 
+        function onClose(){
+            setShowModalPopup(false); 
+        }
     return (
         <div>
             <button onClick={handleToggleModalPopup}> Open Modal Popup</button>
             {
-                showModalPopup && <Modal body={<div> Customized body </div>} />
+                showModalPopup && 
+                <Modal
+                id={'custom-id'}
+                header={<h1>Customied Header</h1>} 
+                footer={<h1>Customized Footer</h1>}
+                onClose={onClose}
+                 body={<div> Customized body </div>} />
             }
         </div>
     )
