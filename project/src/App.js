@@ -10,6 +10,7 @@ import menus from '../src/components/tree-view/data.js';
 import ScrollIndicator from './components/scroll-indicator';
 import TabTest from './components/tabs/tab-test';
 import ModalTest from './components/custom-modal/modal-test';
+import GithubProfileFinder from './components/github-profile-finder';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
     {/* <ScrollIndicator  url = {'https://dummyjson.com/products?limit=100'}/> */}
     {/* <TabTest/> */}
     {/* <ModalTest/> */}
+    <GithubProfileFinder />
     </div>
   );
 }
