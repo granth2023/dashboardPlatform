@@ -9,7 +9,7 @@ export default function User({user}){
             <div> 
                 <img src={avatar_url} className="avatar" alt="User" />
             </div>
-            <div>
+            <div className="name-container">
                 <a href={`https://github.com/${login}`}>{name || login}</a>
                 <p> User joined on {`${createdDate.getDate()} ${createdDate.toLocaleDateString('en-us', { motnh: 'short',
             })}} ${createdDate.getFullYear()}`}</p>
