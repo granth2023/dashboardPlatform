@@ -1,4 +1,5 @@
-Ext.define('Platform.view.main.MainViewModel', {
+Ext.define('
+					{ "text": "Resourceallocation", "iconCls": "x-fa fa-cog", "xtype": "resourceallocationview", "leaf": true },Platform.view.main.MainViewModel', {
 	extend: 'Ext.app.ViewModel',
 	alias: 'viewmodel.mainviewmodel',
 	data: {
